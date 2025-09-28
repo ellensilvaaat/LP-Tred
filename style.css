@@ -116,7 +116,14 @@ body {
   text-align: right;
 }
 
-.about_cards img{
+.about_cards{ display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 2.1875rem; 
+  padding-top: 8.125rem; }
+
+.card_icon{
   height: clamp(7rem, 12vw, 9rem);
   width: auto;
   transform: none;          
@@ -212,7 +219,6 @@ body {
 .location_title_span { color: var(--brand); }
 
 .location_subtitle{
-  max-width: 27.625rem;
   margin-left: 31.1875rem;
   text-align: center;
   font-size: clamp(0.8rem, 1.8vw, 1.125rem);  
@@ -440,7 +446,8 @@ body {
   .gallery_overlay{ flex-direction:column; align-items:center; gap:1.5rem; padding:4rem 2rem 0 2rem; } }
   .gallery_cards{ flex-direction:row; flex-wrap:wrap; justify-content:center; gap:1rem; }
   .gallery_item img{ width: min(10.125rem, 40vw); height:auto; gap: 0; }
-  .gallery_title, .gallery_subtitle{ min-width: 0; align-items: center; width: auto;}
+  .gallery_title{ min-width: 0; width: auto; text-align: center;}
+  .gallery_subtitle{ min-width: 0; width: auto; text-align: center;}
 
   /* Mantém o bg de desktop aqui, só ajusta a posição do botão */
   .location_container{
@@ -450,12 +457,12 @@ body {
     min-height: 34rem;
   }
   .location_info{ padding-top: 20rem; } /* empurra o botão para baixo */
-  .location_address{ text-align:center; font-size: 0.875rem; padding-top: 1rem; }
+  .location_address{ text-align:center; font-size: 0.875rem; padding-top: 1rem; padding-right: 0; }
   .location_subtitle{ margin-left: 0; padding: 0.9rem 2rem 0 2rem;}
   .location_title{padding-top: 3.5rem;}
 
   .form_container{ padding:2rem; }
-  .form_title, .form_subtitle{ text-align:center; max-width:20rem; margin:0 auto; padding-left: 0; }
+  .form_title, .form_subtitle{ text-align:center; margin:0 auto; padding-left: 0; }
   .form_text{ padding-bottom: 2rem; }
   .lead_form{ padding-top:2rem; }
   .form_input{ width:14rem; }
@@ -463,7 +470,7 @@ body {
 
 
 /* ---------- TABLET GRANDE: 768–1000 ---------- */
-@media (min-width:768px) and (max-width:1000px){
+@media (min-width:768px) and (max-width:900px){
   .container{ padding: 2rem 3rem; flex-direction: row; gap: 2rem; }
 
   .logo{ width: clamp(10rem, 18vw, 15rem); }
