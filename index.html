@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tred Flooring</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero_container">
+        <div class="container_topbar">
+                 <img src="./assets/images/logo.svg" alt="Tred Flooring Logo" class="logo">
+        </div>
+      <div class="container_text">
+      <h1 class="title">Your next step <span class="title_span">starts here</span></h1>
+      <h2 class="subtitle"> <span class="subtitle_span">Tred Flooring</span> elevates every detail to a new standard of style and functionality.</h2>
+      <a href="#form-section" class="btn">Be the first to know</a>
+      </div>
+    </div>
+  </header>
+  <section class="about">
+    <div class="about_container">
+      <div class="container">
+      <h2 class="about_title">Why Choose <span class="about_title_span">Tred?</span></h2>
+      <p class="about_subtitle">We transform spaces with innovation, style, and passion. Soon, our new showroom at Supa Centa Moore Park will open to inspire your next project.</p>
+      </div>
+      <div class="about_cards">
+        <div class="card">
+          <img src="./assets/images/Group 4.svg" alt="Icon 1" class="card_icon">
+          <h3 class="card_title">Design-led guidance</h3>
+        </div>
+        <div class="card">
+          <img src="./assets/images/Group 5.svg" alt="Icon 1" class="card_icon">
+          <h3 class="card_title">End-to-end delivery</h3>
+        </div>
+        <div class="card">
+          <img src="./assets/images/Group 6.svg" alt="Icon 1" class="card_icon">
+          <h3 class="card_title">Certified, durable ranges</h3>
+        </div>
+        <div class="card">
+          <img src="./assets/images/Group 7.svg" alt="Icon 1" class="card_icon">
+          <h3 class="card_title">Clear timelines</h3>
+        </div>
+      </div>
+      <p class="about_text">Driven by expertise and passion, we deliver innovative designs that last.</p>    
+    </div>
+  </section>
+<section class="gallery">
+    <div class="gallery_container">
+      <div class="gallery_overlay">
+      <h2 class="gallery_title">Inspiration for <span class="gallery_title_span">Every Step</span></h2>
+      <p class="gallery_subtitle">From timeless classics to bold modern finishes, each step is crafted to transform spaces into unique experiences.</p>
+      </div>
+      <div class="gallery_cards">
+      <div class="gallery_item">
+        <img src="./assets/images/d1a9c42d-e269-4271-8773-461ca801727d 1.svg" alt="Gallery Image 1">
+        <p class="gallery_caption">Moonstone <br> Hybrid</p>
+      </div>
+      <div class="gallery_item">
+        <img src="./assets/images/c3e94cd3-564d-491c-92d8-add202f9b35d 1.svg" alt="Gallery Image 2">
+        <p class="gallery_caption">Wintertide <br> Hybrid</p>
+      </div>
+      <div class="gallery_item">
+        <img src="./assets/images/PHOTO-2025-09-26-10-39-40 1.svg" alt="Gallery Image 3">
+        <p class="gallery_caption">Engineered Timber <br> Aurora Colour</p>
+      </div>
+      <div class="gallery_item">
+        <img src="./assets/images/PHOTO-2025-09-08-19-40-16 1.svg" alt="Gallery Image 4">
+        <p class="gallery_caption">Moonstone <br> Hybrid</p>
+      </div>
+      <div class="gallery_item">
+        <img src="./assets/images/c3e94cd3-564d-491c-92d8-add202f9b35d 1.svg" alt="Gallery Image 4">
+        <p class="gallery_caption">Moonstone <br> Vinyl Planks</p>
+      </div>
+      </div>
+    </div>
+    </section>
+    <section class="location">
+    <div class="location_container">
+      <h2 class="location_title">Visit Us <span class="location_title_span">Soon</span></h2>
+      <p class="location_subtitle">A new destination where style meets functionality, and every step reflects quality.</p>
+      <div class="location_info">
+      <a href="#form-section" class="location_btn">Be the first to know</a>
+      </div>
+      <p class="location_address">GF 25/2A Todman Ave, Kensington</p>
+      </div>
+    </section>
+  <section id="form-section" class="form_section">
+    <div class="form_container">
+      <h2 class="form_title">Stay Updated on Our <span class="form_title_span">Grand Opening</span> </h2>
+      <p class="form_subtitle">Sign up to receive exclusive updates and be the first to hear when our showroom opens its doors.</p>
+
+      <form id="lead_form" class="lead_form">
+        <p class="form-text">Name</p>
+        <input type="text" name="name" required class="form_input">
+         <p class="form__text">Email</p>
+        <input type="email" name="email" required class="form_input">
+        <span id="email_error" class="error-message" aria-live="polite"></span>
+        <input type="text" name="company" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;">
+        <div class="divider">
+        <button type="submit" class="form_btn">Be the first to know</button> 
+      </div>
+      </form>
+      <p class="form_text">By subscribing, you agree to receive communications from Tred Flooring. You can unsubscribe at any time.</p>
+<div id="success_modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal__dialog">
+    <button class="modal__close" type="button" aria-label="Close" data-close>&times;</button>
+    <h3 id="modal-title" class="modal__title">All set!</h3>
+    <p class="modal__text">Thanks! You are on the list. 🎉</p>
+    <div class="modal__actions">
+      <button class="modal__btn" type="button" data-close>OK</button>
+    </div>
+  </div>
+</div>
+    </div>
+  </section>
+  <footer class="footer">
+  <div class="footer_container">
+    <img src="./assets/images/Group 11.svg" alt="Tred Flooring Logo" class="footer_logo">
+  </div>
+</footer>
+<script src="script.js" defer></script>
+</body>
+</html>
