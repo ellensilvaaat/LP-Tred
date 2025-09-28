@@ -24,14 +24,21 @@ body {
   background: url("./assets/images/Group 3.png") center/cover no-repeat;
 }
 
-.container_topbar { height:6rem; width: 100%; }
+.container_topbar{
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
 
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: clamp(11rem, 23vw, 20.7rem);
+.logo{
+  position: static;         
+  transform: none;          
+  width: clamp(12rem, 22vw, 20rem);
   height: auto;
+  shape-rendering: geometricPrecision;
+  text-rendering: optimizeLegibility;
 }
 
 .container_text{
@@ -102,20 +109,17 @@ body {
 .about_subtitle{
   width: 100%;
   min-width: 43rem;
-  font-size: clamp(1rem, 1.8vw, 1.125rem);  
+  font-size: clamp(0.8rem, 1.8vw, 1.125rem);  
   font-weight: 500;
   font-family: "Inter", sans-serif;
   color: black;
   text-align: right;
 }
 
-.about_cards{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 2.1875rem;
-  padding-top: 8.125rem;
+.about_cards img{
+  height: clamp(7rem, 12vw, 9rem);
+  width: auto;
+  transform: none;          
 }
 
 .card{ position: relative; text-align: center; }
@@ -161,7 +165,7 @@ body {
 .gallery_subtitle{
   width: 100%;
   min-width: 31.9375rem;
-  font-size: clamp(1rem, 1.8vw, 1.125rem);  
+  font-size: clamp(0.8rem, 1.8vw, 1.125rem);  
   font-weight: 500;
   font-family: "Inter", sans-serif;
   color: black;
@@ -211,7 +215,7 @@ body {
   max-width: 27.625rem;
   margin-left: 31.1875rem;
   text-align: center;
-  font-size: clamp(1rem, 1.8vw, 1.125rem);  
+  font-size: clamp(0.8rem, 1.8vw, 1.125rem);  
   font-weight: 500;
   font-family: "Inter", sans-serif;
   color: black;
@@ -221,7 +225,7 @@ body {
 .location_address{
   color: rgba(0, 0, 0, 0.2);
   text-align: right;
-  font-size: clamp(1rem, 1.6vw, 1.0625rem);
+  font-size: clamp(0.5rem, 1.6vw, 1.0625rem);
   font-weight: 500;
   font-family: "Inter", sans-serif;
   padding-top: 0.8rem;
@@ -232,7 +236,7 @@ body {
 .location_info{ text-align: center; padding-top: 27.5625rem; } /* base (desktop) */
 .location_btn{
   padding: 0.4375rem 0.8125rem;
-  font-size: clamp(0.95rem, 1.2vw, 1.0625rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.0625rem);
   border-radius: var(--radius);
   background: var(--brand);
   color: #fff;
@@ -264,7 +268,7 @@ body {
 
 .form_subtitle{
   text-align: center;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(0.8rem, 2vw, 1.25rem);
   font-weight: 500;
   font-family: "Inter", sans-serif;
   color: white;
@@ -338,10 +342,11 @@ body {
 .footer{ position:relative; top:-3.5rem; height: 1.25rem; z-index: 2; }
 .footer_container{ background-color: transparent; }
 .footer_logo{
-  display:block;
-  width: min(1440px, 100%);
+  display: block;
+  max-width: 100%;
+  width: 100%;    
   height: auto;
-  margin: 0 auto;
+  transform: none;
 }
 
 .form_input[aria-invalid="true"] {
@@ -413,7 +418,7 @@ body {
 
 /* ---------- TABLET PEQUENO: 321–767 ---------- */
 @media (min-width:321px) and (max-width:767px){
-  .container{ padding: 2rem; flex-direction: column; gap: 2rem; align-items: center; }
+  .container{ padding:4rem 2rem 0 2rem; flex-direction: column; gap: 2rem; align-items: center; }
 
   .logo{ width: 12rem; }
   .hero_container{ min-height: 26rem; background-position: 40%; }
@@ -427,11 +432,15 @@ body {
   .card{ flex:1 1 45%; display:flex; align-items:center; justify-content:center; position:relative; }
   .about_cards img{ height: clamp(6rem, 16vw, 8rem); width:auto; }
   .card_title{ font-size: clamp(0.6rem, 2.4vw, 1rem); }
+  .about_text{
+    padding-top: 2rem;
+    width: 70%;
+    transform: translate(20%);}
 
-  .gallery_overlay{ flex-direction:column; align-items:center; gap:1.5rem; padding:2rem;  }
+  .gallery_overlay{ flex-direction:column; align-items:center; gap:1.5rem; padding:4rem 2rem 0 2rem; } }
   .gallery_cards{ flex-direction:row; flex-wrap:wrap; justify-content:center; gap:1rem; }
   .gallery_item img{ width: min(10.125rem, 40vw); height:auto; gap: 0; }
-  .gallery_title, .gallery_subtitle{ min-width: 0; align-items: center;}
+  .gallery_title, .gallery_subtitle{ min-width: 0; align-items: center; width: auto;}
 
   /* Mantém o bg de desktop aqui, só ajusta a posição do botão */
   .location_container{
@@ -442,8 +451,8 @@ body {
   }
   .location_info{ padding-top: 20rem; } /* empurra o botão para baixo */
   .location_address{ text-align:center; font-size: 0.875rem; padding-top: 1rem; }
-  .location_subtitle{ margin-left: 0;}
-  .location_title{padding-top: 2.5rem;}
+  .location_subtitle{ margin-left: 0; padding: 0.9rem 2rem 0 2rem;}
+  .location_title{padding-top: 3.5rem;}
 
   .form_container{ padding:2rem; }
   .form_title, .form_subtitle{ text-align:center; max-width:20rem; margin:0 auto; padding-left: 0; }
@@ -451,7 +460,7 @@ body {
   .lead_form{ padding-top:2rem; }
   .form_input{ width:14rem; }
   .footer{top: -3rem; height: 1.125rem;}
-}
+
 
 /* ---------- TABLET GRANDE: 768–1000 ---------- */
 @media (min-width:768px) and (max-width:1000px){
