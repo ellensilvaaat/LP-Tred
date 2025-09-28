@@ -437,7 +437,7 @@ body {
   .about_cards{ flex-direction:row; flex-wrap:wrap; gap:1rem; padding-top:3rem; }
   .card{ flex:1 1 45%; display:flex; align-items:center; justify-content:center; position:relative; }
   .about_cards img{ height: clamp(6rem, 16vw, 8rem); width:auto; }
-  .card_title{ font-size: clamp(0.6rem, 2.4vw, 1rem); }
+  .card_title{ font-size: clamp(0.6rem, 2vw, 1rem); }
   .about_text{
     padding-top: 2rem;
     width: 70%;
